@@ -1,0 +1,51 @@
+.bigbox {
+    background-color: rgb(233, 232, 232);
+    width: 5.5rem;
+    margin: .2rem;
+}
+#goods_Box {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.3rem;
+    position: relative;
+    background-color: rgb(253, 253, 253);    
+    }
+.picBox {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin:0 auto;
+
+}
+.picBox img {
+    position: absolute;
+    top:calc(50% - 25px);
+    left: calc(50% - 25px);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+#goods_Box p {
+    font-size: .45rem;
+    color: #999;
+    height: .7rem;
+    line-height: .7rem;
+    padding: .2rem;
+    margin: 0 .25rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bigbox b {
+    font-size: 0.65rem;
+    font-weight: 400;
+    width: 5rem;
+    height: 1rem;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: red;
+}

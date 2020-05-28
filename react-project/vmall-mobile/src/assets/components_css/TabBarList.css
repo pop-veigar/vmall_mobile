@@ -1,0 +1,6 @@
+.tabBarBox {
+  position: fixed;
+  width: 23rem;
+  bottom:0rem;
+  z-index: 999;
+}

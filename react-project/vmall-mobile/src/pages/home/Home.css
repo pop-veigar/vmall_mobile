@@ -1,0 +1,5 @@
+.goodsbox {
+    width: 23rem;
+    display: flex;
+    overflow: hidden;
+}

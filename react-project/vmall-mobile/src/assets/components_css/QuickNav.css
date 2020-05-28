@@ -1,0 +1,158 @@
+.QucikNavBox {
+    width: 23rem;
+    height: 8rem;
+}
+.TagBox{
+    width: 23rem;
+    height: 2rem;
+}
+.TagBox ul {
+    display: flex;
+}
+.TagBox ul li {
+    display: inline-block;
+    width: 9.9rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    justify-content: space-around;
+}
+.TagBox ul li span {
+    color: #cac8c8;
+    font-weight: 500;
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+}
+.TagBox ul li img {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 0.2rem;
+    right: 0.2rem;
+   
+}
+.NavBar {
+    width: 23rem;
+    height: 3.6rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.swiper-slid {
+    width: 5rem;
+}
+.swiper-slid p {
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    width: 3.7rem;
+    margin-left: 0.8rem;
+}
+.one img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: 1rem;
+    clip: rect(0px 37px 40px 0px);
+}
+.two img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -1.1rem;
+    clip: rect(0px 74px 40px 38px);
+}
+.three img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left:9.7rem;
+    margin-left: -4rem;
+    clip: rect(0px 112px 40px 72px);
+}
+.four img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 13.7rem;
+    margin-left: -6rem;
+    clip: rect(0px 148px 40px 111px);
+}
+.five img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 18.4rem;
+    margin-left: -8.5rem;
+    clip: rect(0px 184px 40px 148px);
+}
+.six img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -10rem;
+    clip: rect(0px 224px 40px 186px);
+}
+.seven img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -12rem;
+    clip: rect(0px 260px 40px 222px);
+}
+.eight img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -14rem;
+    clip: rect(0px 296px 40px 258px);
+}
+.nine img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -16rem;
+    clip: rect(0px 332px 40px 294px);
+}
+.ten img {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin-left: -18rem;
+    clip: rect(0px 386px 40px 330px);
+}
+.NewsBox {
+    width: 23rem;
+    height: 2rem;
+}
+.News {
+    width: 23rem;
+    height: 2rem;
+    display: flex;
+}
+.News li {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+}
+.News :first-child {
+    width: 5.3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+.News :nth-child(2) {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+    width: 15.5rem;
+}
+.News :last-child {
+    width: 3rem;
+    text-align: center;
+}
