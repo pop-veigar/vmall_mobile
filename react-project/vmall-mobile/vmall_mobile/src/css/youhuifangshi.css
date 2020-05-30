@@ -1,0 +1,25 @@
+.bigbox {
+    display: flex;
+    align-content: center;
+    /* padding: 2rem 1rem ; */
+    padding: 1.5rem;
+    margin-top: -2rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    width: 80%;
+    /* border: solid 1px teal; */
+    border-radius: 1rem;
+    background-color: white;
+    color: #666 ;
+}
+.yangshi {
+    /* border: solid 1px red; */
+    margin: 1rem;
+
+}
+#biankuang {
+    margin: 0;
+    padding: 1rem;
+    border-left: solid 1px #666;
+    border-right: solid 1px #666;
+}

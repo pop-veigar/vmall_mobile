@@ -1,0 +1,157 @@
+.QucikNavBox {
+    width: 6.4rem;
+    height: auto;
+}
+.TagBox{
+    width: 6.4rem;
+    height: .55rem;
+}
+.TagBox {
+    display: flex;
+}
+.TagBox li {
+    display: inline-block;
+    width: 9.9rem;
+    height: .55rem;
+    line-height: .55rem;
+    text-align: center;
+    justify-content: space-around;
+}
+.TagBox li span {
+    color: #cac8c8;
+    font-weight: 500;
+    display: inline-block;
+    height: .55rem;
+    line-height: .55rem;
+}
+.TagBox  li img {
+    width: 20%;
+    height: 60%;
+    position: relative;
+    top: 0.1rem;
+    right: 0.1rem;
+   
+}
+.NavBar {
+    width: 6.4rem;
+    height: 1.11rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.swiper-slid {
+    width: 1.39rem;
+}
+.NavBar_p {
+    display: inline-block;
+    position: relative;
+    top: .68rem;
+    width: .9rem;
+    font-size: .22rem;
+    text-align: center;
+    margin-left: 0.32rem;
+}
+.one img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    margin-left: .4rem;
+    clip: rect(0rem 0.66rem 0.75rem 0rem);
+}
+.two img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    margin-left: -.2rem;
+    clip: rect(0rem 1.3rem 0.68rem 0.66rem);
+}
+.three img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left:1.62rem;
+    clip: rect(0rem 1.95rem 0.75rem 1.26rem);
+}
+.four img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 2.2rem;
+    clip: rect(0rem 2.58rem 0.75rem 1.91rem);
+}
+.five img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 2.8rem;
+    clip: rect(0rem 3.23rem 0.75rem 2.53rem);
+}
+.six img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left:3.32rem;
+    clip: rect(0rem 3.86rem 0.75rem 3.18rem);
+}
+.seven img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 3.93rem;
+    clip: rect(0rem 4.47rem 0.75rem 3.87rem);
+}
+.eight img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 4.5rem;
+    clip: rect(0rem 5.13rem 0.75rem 4.45rem);
+}
+.nine img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 5.1rem;
+    clip:rect(0rem 5.78rem 0.75rem 5.1rem);
+}
+.ten img {
+    width: 100%;
+    height: .68rem;
+    position: absolute;
+    left: 5.65rem;
+    clip: rect(0rem 6.41rem 0.75rem 5.75rem);
+}
+.NewsBox {
+    width: 6.4rem;
+    height:.55rem;
+}
+.News {
+    width: 6.4rem;
+    height:.55rem;
+    display: flex;
+}
+.News li {
+    display: inline-block;
+    height:.55rem;
+    line-height:.55rem;
+}
+.News :first-child {
+    width: 1.47rem;
+    font-size: .265rem;
+    font-weight: 600;
+    text-align: center;
+}
+.News :nth-child(2) {
+    display: inline-block;
+    height:.55rem;
+    line-height:.55rem;
+    overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+    width: 4rem;
+}
+.News :last-child {
+    width: .53rem;
+    text-align: center;
+}

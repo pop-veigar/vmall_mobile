@@ -1,0 +1,65 @@
+#AD {
+    margin-top: 1rem;
+    width: 6.4rem;
+}
+.ADbox {
+    list-style: none;
+    width: 6.4rem;
+    display: inline-block;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+}
+.ADbox >:first-child {
+    width: 3.07rem;
+    height: 4.35rem;
+}
+.ADbox li {
+    display: inline-block;
+    width: 3.07rem;
+    height:2.16rem;
+    margin-right: .07rem;
+}
+.ADbox li img {
+    width: 100%;
+    height: 100%;
+} 
+.ADbox :nth-child(2) {
+    position: absolute;
+}
+.promitionGoods {
+    width: 6.4rem;
+    display: flex;
+    margin: 0 auto;
+}
+.promitionGoods li {
+    width: 2.04rem;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.promitionGoods >li >img {
+    width: 77%;
+    height: 53%;
+    padding-top: .1rem;
+}
+#promotion_desc {
+    font-size: .22rem;
+    color: #9b9b9b;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#promotion_title,#promotion_price{
+    font-size: .22rem;
+    color: #333;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0.18rem;
+}
+
+
+

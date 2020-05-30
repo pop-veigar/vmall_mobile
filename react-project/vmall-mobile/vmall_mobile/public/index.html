@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/Huawei.svg">
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if (!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
+
+  <title>华为商城</title>
+
+  <script>
+    function resetWidth() {
+
+      // 兼容ie浏览器 document.body.clientWidth
+
+      var baseWidth = document.documentElement.clientWidth || document.body.clientWidth;
+
+      console.log(baseWidth);
+
+      // 默认的设置是375px(ip6)的根元素设为100px, 其他的手机都相对这个进行调整
+      if (baseWidth > 640) {
+        document.documentElement.style.fontSize = "100px"
+      } else {
+        document.documentElement.style.fontSize = baseWidth / 640 * 100 + 'px'
+      }
+
+    }
+
+    resetWidth();
+
+    window.addEventListener('resize', function () {
+
+      resetWidth();
+
+    })
+
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+</body>
+
+</html>

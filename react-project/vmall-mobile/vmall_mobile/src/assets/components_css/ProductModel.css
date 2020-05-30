@@ -1,0 +1,111 @@
+#productBox {
+    width: 6.4rem;
+    margin-top: .8rem;
+}
+#p_title {
+    display: block;
+    width: 6.4rem;
+    height: .55rem;
+    font-size: .3rem;
+    font-weight: 400;
+    text-align: center;
+    margin: .3rem auto;
+}
+#productUl {
+    list-style: none;
+    width: 6.4rem;
+    text-align: center;
+
+}
+#productUl li{
+    width: 2.78rem;
+    display: inline-block;
+    border-radius: .1rem;
+    margin: 0.03rem;
+    background-color: #f9f9f9;
+}
+.productBox {
+    position: relative;
+    width: 2.78rem;
+    text-align: center;
+}
+.productBox img {
+    width: 85%;
+    height: 85%;
+}
+
+#productUl li :nth-last-child(3) {
+    color:black;
+    height: .548rem;
+}
+#productUl li :nth-child(3) {
+    color: red;
+}
+#desc {
+    height: .27rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .3rem;
+    width: 100%;
+    background-color: #e8e7e7;
+    box-sizing: border-box;
+    color: darkgray;
+}
+#productUl li del {
+    color: darkgray;
+}
+
+ /* 以下是小盒子 */
+
+
+ .more {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 6.4rem;
+    /* height: 10rem; */
+    text-align: center;
+ }
+.moreBox {
+    width: 2.22rem;
+    margin: 0 auto;
+    background-color:  #f9f9f9;
+    /* background-color: darkturquoise;
+    background-color: #e8e7e7; */
+}
+#picbox {
+    margin: 0 auto;
+    width: 1.39rem;
+  
+}
+#picbox img {
+    width: 100%;
+    height: 100%;
+}
+.colorr {
+    color: red;
+}
+.dadaxiao{
+ 
+  background-color: #e8e7e7;
+  color: #9b9b9b;
+  font-size: .2rem;
+
+}
+.ziticolor {
+    color: #000;
+    height: .548rem;
+    font-size: .2rem;
+
+    
+}
+
+.faxian {
+    margin: .5rem auto;
+    text-align: center;
+}
+.del {
+    color: #9b9b9b;
+}

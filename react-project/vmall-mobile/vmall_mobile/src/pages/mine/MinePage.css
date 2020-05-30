@@ -1,0 +1,49 @@
+.waimian{
+    background-color: #F4F4F4;
+}
+.hezi{
+    width: 100%;
+    display: flex;
+    border: solid 1px red;
+    background-color: #E94032;
+    
+}
+.headd {
+    border: 0;
+    width: 4rem;
+    height: auto;
+margin: 3rem  1.5rem;
+    /* vertical-align: top; */
+}
+.shezhii {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.3rem;
+    
+    margin: 0.3rem;
+    /* margin-left: 1.5rem; */
+    color: whitesmoke;
+    /* border: solid 2px black;  */
+    
+}
+.gaibainzi {
+    color: whitesmoke;
+     /* margin-top:3.5rem; */
+     padding: 3.5rem 1rem ;
+     font-weight:normal;
+     /* border: solid 2px black;  */
+     
+
+
+}
+
+.xaiohezi{
+    padding: 0.12rem 0.7rem;
+    /* margin-left: 0.5rem; */
+    /* margin: 0.5rem; */
+    border: solid 0.2rem rgba(0, 0, 0, 0);
+    border-radius: 1rem;
+    background-color: brown;
+    /* font-weight:normal; 
+} */
+}

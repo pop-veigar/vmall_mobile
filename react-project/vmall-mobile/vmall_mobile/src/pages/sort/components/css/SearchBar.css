@@ -1,0 +1,45 @@
+.searchbar_empty {
+    width: 6.4rem;
+    height: .77rem;
+}
+.searchbarbox {
+    width: 6.4rem;
+    height: auto;
+    position: fixed;
+    top: 0rem;
+    z-index: 999;  
+    background-color: #fff;
+}
+.searchbarUl {
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+.search {
+    margin: .09rem auto;
+    width: 80%;
+    height: auto;
+    color: #b3b3b3;
+    background-color: rgba(155, 155, 155, 0.1);
+    border-radius: .5rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.search img {
+    border-style: none;
+    margin-left: .1rem;
+}
+.search p {
+    height: 0.58rem;
+    line-height: .58rem;
+    margin-left: .05rem;
+}
+.msg {
+    width: 10%;
+    margin-right: .05rem;
+}
+.msg img {
+    border-style: none;
+    height: 74%;
+    margin-top: .03rem;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 1000px;height: 300px;margin: 20px auto;position: relative;overflow: hidden;}
+        .imgbox a{width: 1000px;height: 300px;position: absolute;left:1000px;top:0;}
+        .imgbox a:nth-child(1){left:0;}
+        .imgbox img{width: 1000px;height: 300px;}
+    
+        .btns input{width: 40px;height: 40px;position: absolute;top:130px;border: none;background: rgba(200,200,200,0.5);}
+        #left{left:0;}
+        #right{right: 0;}
+    
+        .list{width: 1000px;height: 30px;position: absolute;left: 0;bottom: 0;display: flex;background: rgba(200,200,200,0.5);}
+        .list span{flex: 1;line-height: 30px;text-align: center;border-left: solid 1px #ccc;}
+        .list span.active{background: red;color: #fff;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="imgbox">
+            <a><img src="./assets/imgs/5g.png" alt=""></a>
+            <a><img src="./assets/imgs/618.jpg" alt=""></a>
+            <a><img src="./assets/imgs/nova7.jpg" alt=""></a>
+            <a><img src="./assets/imgs/P40.jpg" alt=""></a>
+            <a><img src="./assets/imgs/RY30.jpg" alt=""></a>
+        </div>
+        <div class="btns">
+            <input type="button" id="left" value="<<<">
+            <input type="button" id="right" value=">>>">
+        </div>
+        <div class="list">
+        </div>
+    </div>
+</body>
+<script> 
+    // 无论代码写的好坏，习惯要好，哈哈哈~~~
+    // 好习惯就是在动手开始做之前，先来进行一个分析，如下：
+     
+        // 分析：
+            // 因为当前的布局方式，采取同时控制两个索引的方式，让图片动起来
+            // 要走的
+            // 要进来的
+    
+            // 选择元素
+            // 绑定事件
+                // 计算索引
+                // 根据索引移动对应的图片
+            
+            // list的创建，跟随程序的执行立即创建
+            // list内的小方块要根据图片的张数创建
+            // 根据默认索引设置当前项
+            // 绑定事件（事件委托）
+                // 点击时计算要走的和要进来的索引
+                // 判断方向
+                // 再去移动
+                // 修改索引，为点前点击的内容
+                // 修改当前项
+    
+            
+    class Banner{
+        constructor(){
+            this.left = document.getElementById("left");
+            this.right = document.getElementById("right");
+            this.child = document.querySelectorAll(".imgbox a");
+            this.list = document.querySelector(".list");
+            this.box = document.querySelector(".box");
+    
+            this.iNow = 0;
+            this.iPrev = this.child.length - 1;
+        }
+        init(){
+            var that = this;
+            this.left.addEventListener("click",function(){
+                that.changeIndex(1);
+            })
+            this.right.addEventListener("click",function(){
+                that.changeIndex(-1);
+            })
+            // L3.事件委托绑定事件
+            this.list.onclick = function(eve){
+                var e = eve || window.event;
+                var tar = e.target || e.srcElement;
+                if(tar.tagName == "SPAN"){
+                    // L4.触发事件时，执行改变索引，同时将点前点击的span传入
+                    that.listChangeIndex(tar);
+                }
+            }
+        }
+        changeIndex(direct){
+            if(direct == 1){
+                if(this.iNow == 0){
+                    this.iNow = this.child.length-1;
+                    this.iPrev = 0;
+                }else{
+                    this.iNow--;
+                    this.iPrev = this.iNow + 1;
+                }
+            }else{
+                if(this.iNow == this.child.length-1){
+                    this.iNow = 0;
+                    this.iPrev = this.child.length-1;
+                }else{
+                    this.iNow++;
+                    this.iPrev = this.iNow - 1;
+                }
+            }
+            this.move(direct);
+        }
+        move(direct){
+            // 根据左右按钮传入的状态：左1，右-1
+            // 利用乘法
+            // 改变不同按钮的方向问题
+            this.child[this.iPrev].style.left = 0;
+            move(this.child[this.iPrev],{left:this.child[0].offsetWidth * direct});
+            this.child[this.iNow].style.left = -this.child[0].offsetWidth * direct + "px";
+            move(this.child[this.iNow],{left:0});
+    
+            this.setActive();
+        }
+        createList(){
+            // L1.创建对应图片数量的span，同时编号
+            var str = ``;
+            for(var i=0;i<this.child.length;i++){
+                str += `<span index='${i}'>${i+1}</span>`;
+            }
+            this.list.innerHTML = str;
+    
+            // L2.设置默认的当前项
+            this.setActive();
+        }
+        setActive(){
+            for(var i=0;i<this.list.children.length;i++){
+                this.list.children[i].className = "";
+            }
+            this.list.children[this.iNow].className = "active";
+        }
+        listChangeIndex(tar){
+            // L5.确定要走的索引和要进来的索引
+            // this.iNow    要走的
+            // 拿到点击的span的编号     要进来的
+            var index = parseInt(tar.getAttribute("index"));
+            // console.log(this.iNow, index);
+            // L6-1.判断方向
+            if(index > this.iNow){
+                // L7-1.向左运动
+                this.listMove(1,index);
+            }
+            // L6-2.判断方向
+            if(index < this.iNow){
+                // L7-2.向右运动
+                this.listMove(-1,index);
+            }
+    
+            // L8.将当前点击的索引设置成下次要走的索引
+            this.iNow = index;
+    
+            // L9.根据修改之后的索引，设置当前项
+            this.setActive();
+        }
+        listMove(direct,index){
+            // this.iNow走
+                // 从哪走，走到哪
+            this.child[this.iNow].style.left = 0;
+            move(this.child[this.iNow],{left:-1000 * direct})
+            // index进来
+                // 从哪进来，进到哪
+            this.child[index].style.left = 1000 * direct + "px";
+            move(this.child[index],{left:0});
+        }
+        autoPlay(){
+            var t = setInterval(()=>{
+                this.changeIndex(-1);
+            },2000)
+    
+            this.box.onmouseover = function(){
+                clearInterval(t);
+            }
+    
+            var that = this;
+            this.box.onmouseout = function(){
+                t = setInterval(()=>{
+                    that.changeIndex(-1);
+                },2000)
+            }
+            
+        }
+    }
+    
+    var b = new Banner();
+    b.init();
+    b.createList();
+    b.autoPlay();
+    
+    </script>
+</html>
+{
+    <!-- function move(ele,obj,cb){
+    clearInterval(ele.t);
+    ele.t = setInterval(() => {
+        var i = true;
+        for(var attr in obj){
+            if(attr == "opacity"){
+                var iNow = getStyle(ele,attr) * 100;
+            }else{
+                var iNow = parseInt(getStyle(ele,attr));
+            }
+            let speed = (obj[attr] - iNow)/10;
+            speed = speed < 0 ? Math.floor(speed) : Math.ceil(speed);
+            // 只要有一个属性没到目标：绝对不能清除计时器
+            if(iNow !== obj[attr]){
+                i = false;
+            }
+            if(attr == "opacity"){
+                ele.style.opacity = (iNow + speed)/100;
+            }else{
+                ele.style[attr] = iNow + speed + "px";
+            }
+        }
+        if(i){
+            clearInterval(ele.t);
+            if(cb){
+                cb();
+            }
+            // cb && cb();
+        }
+    }, 30);
+}
+
+function getStyle(ele,attr){
+    if(ele.currentStyle){
+        return ele.currentStyle[attr];
+    }else{
+        return getComputedStyle(ele,false)[attr];
+    }
+} -->
+}

@@ -1,0 +1,114 @@
+.sidebarbox {
+    width: 6.4rem;
+    height: auto;
+}
+.sidebar_left {
+    width: 27%;
+    height: auto;
+    margin: auto;
+    float: left;
+    position: fixed;
+}
+.sidebarLi {
+    text-align: left;
+    padding-left: .08rem;
+    width: 98%;
+    height:.89rem;
+    line-height:.89rem;
+}
+
+.sidebarLi span {
+    display: inline-block;
+    width: 100%;
+    height: .27rem;
+    line-height: .27rem;
+}
+.sidebarLi :hover {
+    border-right:0.05rem solid red;
+    color: red;
+}
+
+
+
+
+
+/* _____右侧广告图片区域___________________________ */
+.sidebar_right {
+    width: 68%;
+    height: auto;
+    float: right;
+    overflow-y:scroll;
+}
+.sidebarAD {
+    width: 98%;
+    height: auto;
+    margin: auto;
+}
+.sidebarAD img {
+    margin-top: 0.1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem; ;
+}
+
+
+
+/* _______机型分类区域______________________ */
+.modeltype {
+    width: 100%;
+    height: auto;  
+    overflow: hidden;
+}
+.modeltypeLi {
+    width: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+     
+}
+.modeltypeLi img {
+    width: 100%;
+    border-radius: 0.1rem;
+    margin-right: 0.1rem;
+    margin-top: .1rem;
+    margin-bottom: .3rem;
+}
+
+
+/* ________内容区域______________________________ */
+.phonebox {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.phonebox:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.phonebox :first-child {
+    display: block;
+    width: 100%;
+    margin: .05rem auto;
+    text-align: center;
+}
+
+.phone {
+    width: 26%;
+    float: left;
+    margin: .15rem;
+}
+.phone img {
+    width: 1.67rem;
+    height: 1.11rem;  
+    margin: 0 auto;  
+}
+.phonetitle {
+    font-size: 0.22rem;
+    height: .55rem;
+    line-height: .27rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    color: #999;
+}
